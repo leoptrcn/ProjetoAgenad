@@ -68,9 +68,9 @@ Contato.buscaPorId = async function(id) {
 };
 
 Contato.buscaContatos = async function(id) {
-  const contatos = await ContatoModel.find()
+    const contatos = await ContatoModel.find({id: id})
     .sort({ criadoEm: -1 });
-  return contatos;
+    return contatos;
 };
 
 Contato.delete = async function(id) {
